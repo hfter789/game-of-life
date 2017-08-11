@@ -1,0 +1,33 @@
+.control-panel {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 770px;
+}
+
+.control-list {
+  padding: 0;
+  list-style: none;
+}
+.control-list button {
+  width: 33%;
+  border-radius: 0;
+}
+
+.board-unit {
+  display: inline-block;
+  border-top: 1px #801F15 solid;
+  border-left: 1px #801F15 solid;
+  vertical-align: top;
+}
+
+.board-units {
+  font-size: 0;
+}
+
+.board-container {
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px #801F15 solid;
+  border-radius: 10px;
+}
