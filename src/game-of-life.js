@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import ControlPanel from './control-panel';
 import GameBoard from './game-board';
+import './game-of-life.css';
 const SIZE_ARRAY = [{
   m: 50,
   n: 30,
-  size: 15
 }, {
   m: 70,
   n: 50,
-  size: 10
 }, {
   m: 100,
   n: 80,
-  size: 10
 }];
 const SPEED_ARRAY = [500, 300, 100];
 
@@ -89,6 +87,7 @@ export default class GameOfLife extends Component {
   }
 
   onBoardClick = (e) => {
+    debugger;
     let data = this.state.data;
     let index = e.target.getAttribute('data-board-index');
     if (index) {
@@ -169,9 +168,9 @@ export default class GameOfLife extends Component {
     var size = this.state.size;
     // this.logData();
     return (
-      <div>
+      <div className='main'>
         <ControlPanel onSizeChange={this.onSizeChange} onSpeedChange = {this.onSpeedChange} onControlChange={this.onControllerClick}/>
-        <GameBoard data={this.getData()} width={size.m} unitSize={size.size} onClick={this.onBoardClick}/>
+        <GameBoard data={this.getData()} width={size.m} height={size.n} onClick={this.onBoardClick}/>
       </div>
     );
   }

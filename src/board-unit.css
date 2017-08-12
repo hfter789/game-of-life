@@ -1,0 +1,6 @@
+.board-unit {
+  border-top: 1px #801F15 solid;
+  border-left: 1px #801F15 solid;
+  height: 100%;
+  flex: 1;
+}

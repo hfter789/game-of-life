@@ -1,0 +1,16 @@
+.board-container {
+  height: 100%;
+}
+
+.board-units {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.board-row {
+  flex: 1;
+  flex-direction: row;
+  display: flex;
+}
