@@ -10,8 +10,25 @@
   padding: 0;
   list-style: none;
 }
+
 .control-list button {
   width: 100%;
   border-radius: 0;
   margin-top: 5px;
+}
+
+.panelOpen {
+  position: absolute;
+  height: 100%;
+  /*animation-name: openSlider;*/
+  left: 0;
+  transition-duration: .3s;
+}
+
+.panelClose {
+  position: absolute;
+  height: 100%;
+  /*animation-name: closeSlider;*/
+  left: -256px;
+  transition-duration: .3s;
 }

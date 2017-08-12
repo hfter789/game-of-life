@@ -10,7 +10,6 @@
     "lodash": "^4.17.4",
     "react": "next",
     "react-dom": "next",
-    "react-sidebar": "^2.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SideBar from 'react-sidebar';
 import throttle from 'lodash/throttle';
 import './control-panel.css';
 
@@ -76,16 +75,16 @@ export default class ControlPanel extends Component{
 
   render() {
     const { open } = this.state;
-    const sidebarContent = <div className='control-panel'>
-      <ul className='control-list'>
-        { this.renderMainButtons() }
-        { this.renderSizeButtons() }
-        { this.renderSpeedButtons() }
-      </ul>
-    </div>
     return (
-      <SideBar transitions open={open} sidebar={sidebarContent}>
-      </SideBar>
+      <div className={open ? 'panelOpen' : 'panelClose'}>
+        <div className='control-panel'>
+          <ul className='control-list'>
+            { this.renderMainButtons() }
+            { this.renderSizeButtons() }
+            { this.renderSpeedButtons() }
+          </ul>
+        </div>
+      </div>
     );
   }
 };

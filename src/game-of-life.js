@@ -87,7 +87,6 @@ export default class GameOfLife extends Component {
   }
 
   onBoardClick = (e) => {
-    debugger;
     let data = this.state.data;
     let index = e.target.getAttribute('data-board-index');
     if (index) {
