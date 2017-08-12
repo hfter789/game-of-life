@@ -1,0 +1,17 @@
+.control-panel {
+  width: 256px;
+  height: 100%;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+.control-list {
+  height: 100%;
+  padding: 0;
+  list-style: none;
+}
+.control-list button {
+  width: 100%;
+  border-radius: 0;
+  margin-top: 5px;
+}
