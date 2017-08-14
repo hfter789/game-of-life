@@ -1,46 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import throttle from 'lodash/throttle';
 import './control-panel.css';
 
-const THRUTTLE_TIME = 200;
-
-export default class ControlPanel extends Component{
-  constructor(props) {
-    super(props);
-    this.onMouseMoveThrottled = throttle(this.onMouseMove, THRUTTLE_TIME);
-  }
+export default class ControlPanel extends Component {
 
   static propTypes = {
     onSizeChange: PropTypes.func,
     onSpeedChange: PropTypes.func,
     onControlChange: PropTypes.func
-  }
-
-  state = {
-    open: false,
-  }
-
-  componentDidMount() {
-    document.addEventListener("mousemove", this.onMouseMoveThrottled);
-
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("mousemove", this.onMouseMoveThrottled);
-  }
-
-  onMouseMove = e => {
-    const { x } = e;
-    if (!x) {
-      this.setState({
-        open: true,
-      });
-    } else if (x > 256) {
-      this.setState({
-        open: false,
-      });
-    }
   }
 
   renderMainButtons() {
@@ -74,16 +41,13 @@ export default class ControlPanel extends Component{
   }
 
   render() {
-    const { open } = this.state;
     return (
-      <div className={open ? 'panelOpen' : 'panelClose'}>
-        <div className='control-panel'>
-          <ul className='control-list'>
-            { this.renderMainButtons() }
-            { this.renderSizeButtons() }
-            { this.renderSpeedButtons() }
-          </ul>
-        </div>
+      <div className='control-panel'>
+        <ul className='control-list'>
+          { this.renderMainButtons() }
+          { this.renderSizeButtons() }
+          { this.renderSpeedButtons() }
+        </ul>
       </div>
     );
   }
